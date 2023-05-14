@@ -1,0 +1,33 @@
+.logo
+{
+  font-weight: 600;
+}
+.navLink
+{
+  text-decoration: none;
+  color: #000;
+  margin-left: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+.navLink:hover
+{
+  border: outset;
+  color: #000;
+}
+.loginbutton
+{
+  font-weight: 600;
+  margin-left: 20px;
+}
+.icon
+{
+  color: coral;
+}
+.icon:hover
+{
+  cursor: pointer;
+  animation:animatedBg 5s linear infinite ;
+  transform: translate(5%);
+  color:rgb(255, 0, 51)
+}

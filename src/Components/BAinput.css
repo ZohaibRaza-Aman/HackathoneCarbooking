@@ -1,0 +1,72 @@
+.form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(255,255,255, 0.7),
+        rgba(255,255,255, 0.3)
+    ),
+    url(https://images.unsplash.com/photo-1625225230517-7426c1be750c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGZvcm18ZW58MHx8MHx8&w=1000&q=80);
+    background-size: cover;
+    background-position: center;
+}
+.formInput
+{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+Input
+{
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+form{
+    background-color: white;
+    padding: 0 60px;
+    border-radius: 10px;
+}
+.heading
+{
+    color: #310000;
+    text-align: center;
+    padding-top: 30px;
+}
+.submitbtn
+{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(43, 0, 43);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+label
+{
+    font-size: 12px;
+    color: gray;
+}
+span{
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+input:invalid[focused="true"]
+{
+    border: 1px solid red;
+}
+input:invalid[focused="true"] ~ span
+{
+    display: block;
+}
