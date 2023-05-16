@@ -15,7 +15,9 @@ import { Modal } from "bootstrap";
 
 const Cars = () => {
   const [personName, setPersonName] = React.useState([]);
+  const [userdata, setUserData] = useState('')
   const [Day, setDay] = React.useState(dayjs("2022-04-17T15:30"));
+  
 
   const [carList, setCarList] = useState([
     {
@@ -60,8 +62,7 @@ const Cars = () => {
   };
 
   let edit = (id) => {};
-  const handleInputChange = (e) => {
-    console.log('e.target.value', e.target.value)
+  const handleInputChange = () => {
 
   };
 
@@ -79,6 +80,14 @@ const Cars = () => {
   const handleDayChange = (newValue) => {
     setDay(newValue);
   };
+
+  const handleAddData = (e)=>{
+    e.preventDefault();
+    console.log(userdata,"inputdata==");
+    console.log(Day,"dayyy")
+    console.log(personName,"person");
+  }
+
   return (
     <>
       <BAModal
@@ -91,31 +100,30 @@ const Cars = () => {
             <SMInput
               label={"name"}
               disabled={false}
-              onChange={handleInputChange}
+              onChange={(e) => setUserData({ ...userdata, name: e.target.value })}
               type={"text"}
               styles={{ width: "500px", marginBottom: "20px" }}
               name={"name"}
-              value={""}
+              // value={""}
               variant={"outlined"}
             />
             <SMInput
               label={"Model"}
               disabled={false}
-              onChange={handleInputChange}
+              onChange={(e) => setUserData({ ...userdata, model: e.target.value })}
               type={"text"}
               styles={{ width: "500px", marginBottom: "20px" }}
               name={"model"}
-              value={""}
+              // value={""}
               variant={"outlined"}
             />
 
             <SMInput
-              label={""}
               disabled={false}
-              onChange={handleInputChange}
+              onChange={(e) => setUserData({ ...userdata, file: e.target.value })}
               type={"file"}
               styles={{ width: "500px", marginBottom: "20px" }}
-              name={""}
+              // name={""}
               variant={"outlined"}
             />
             <SMMultiSelector
@@ -123,7 +131,7 @@ const Cars = () => {
               styles={{ width: "500px", marginBottom: "20px" }}
               variant={"outlined"}
               personName={personName}
-              handleChange={handleChange}
+              handleChange={handleInputChange}
               names={names} 
             />
             <SMdatepicker
@@ -133,7 +141,7 @@ const Cars = () => {
               styles={{ marginLeft:"15%", width: "500px", marginBottom: "20px" }}
 
             />
-            <button className="btn btn-dark">ADD</button>
+            <button onClick={handleAddData} className="btn btn-dark">ADD</button>
           </Box>
         }
       />

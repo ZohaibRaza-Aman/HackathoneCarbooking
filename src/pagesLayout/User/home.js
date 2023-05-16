@@ -1,12 +1,13 @@
 import React from 'react'
+import CarCards from './CarCards';
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <CarCards/>
     </div>
   )
 }
 
-export default Home
+export default Home;
 

@@ -19,6 +19,7 @@ import { userLogOut } from "../../config/firebase/firbasemethods";
 import { Logout } from "@mui/icons-material";
 import Profile from "./profile";
 import Home from "./home";
+import CarDetailScreen from './../../redux/Screen/CarDetailScreen';
 
 
 const drawerWidth = 240;
@@ -65,7 +66,7 @@ export default function UserLayout() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Wellcome To Student
+            USER PAGE
           </Typography>
         </Toolbar>
       </AppBar>
@@ -109,8 +110,8 @@ export default function UserLayout() {
       >
         <Toolbar />
         <Routes>
-          <Route path="home/" element={<Home/>} />
-          <Route path="profile/" element={<Profile/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="logout/" element={<Logout />} />
         </Routes>
       </Box>

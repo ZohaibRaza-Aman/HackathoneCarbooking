@@ -8,6 +8,7 @@ import Navbar from './redux/Screen/navbar';
 import Admin from "./redux/Screen/admin";
 import User from "./redux/Screen/user";
 import ProtectedRoute from './config/firebase/ProtectedRoute';
+import CarDetailScreen from "./redux/Screen/CarDetailScreen";
 
 
 
@@ -22,7 +23,9 @@ export default function AppRouter() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="transporter/*" element={<ProtectedRoute Component={Admin} type="admin"/>}></Route>
-        <Route path="user/*" element={<ProtectedRoute Component={User}  type="user"/>}></Route>
+        <Route path="user/*" element={<ProtectedRoute Component={User}  type="user"/>}/>
+
+   
 
       </Routes>
     </BrowserRouter>
