@@ -17,9 +17,9 @@ import { useNavigate } from "react-router";
 import { ListItemIcon } from "@mui/material";
 import { userLogOut } from "../../config/firebase/firbasemethods";
 import { Logout } from "@mui/icons-material";
-import Profile from "./profile";
 import Home from "./home";
 import CarDetailScreen from './../../redux/Screen/CarDetailScreen';
+import BookNow from "./booknow";
 
 
 const drawerWidth = 240;
@@ -32,8 +32,8 @@ export default function UserLayout() {
       icon: <AutoStoriesIcon />,
     },
     {
-      name: "Profile",
-      route: "profile",
+      name: "Book Now",
+      route: "booknow",
       icon: <Logout />,
     },
     {
@@ -111,7 +111,7 @@ export default function UserLayout() {
         <Toolbar />
         <Routes>
           <Route path="/home" element={<Home/>} />
-          <Route path="/profile" element={<Profile/>} />
+          <Route path="/booknow" element={<BookNow/>} />
           <Route path="logout/" element={<Logout />} />
         </Routes>
       </Box>
