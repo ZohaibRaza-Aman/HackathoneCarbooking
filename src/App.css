@@ -8,37 +8,37 @@ body {
 }
 img
 {
-  height: 150px;
-  width: 120px;
+  height: 250px;
+  width: 400px;
 }
 .card1
 {
-  background: white;
+  background: #d8d6d645;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.655);
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.655);
 }
 .productsWrapper
 {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(2,1fr);
   gap: 30px;
 }
 .btn1
 {
   border: none;
   outline: none;
-  background: #2dcb57;
+  background: #181818bc;
   padding: 5px 10px;
-  color: #000000;
+  color: #fff;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .btn1:hover{
-  background: #002238;
+  background: #021623;
   color: #fff;
 }
 .heading
@@ -51,16 +51,6 @@ img
   text-transform: uppercase;
   margin-left: 40px;
 }
-.navLink
-{
-  text-decoration: none;
-  color:#fff;
-  margin-left: 20px;
-  font-weight: 600;
-  background: #240457;
-  border-radius: 4px;
-  padding: 10px 20px;
-}
 .cartCard
 {
   display: flex;
@@ -70,11 +60,6 @@ img
   margin-bottom: 20px;
   padding: 14px;
   border-radius: 5px;
-}
-.logo
-{
-  text-transform: uppercase;
-  font-weight: 600;
 }
 h3{
   text-align: center;

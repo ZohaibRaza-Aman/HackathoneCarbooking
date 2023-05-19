@@ -1,22 +1,16 @@
 import React from "react";
-import SMInput from "./../../Components/SMinput";
-import BAScreenHeader from "./../../Components/BAScreenHeader";
-import Carshop from './../../Components/CarShop';
-import Navbarshop from "../../Components/shopNav";
+import CarCards from "./CarCards";
+import Footerbar from "../../Components/footerbar";
+import Navbar from "./navbar";
 
 const Home = () => {
   return (
     <>
-    <Navbarshop/>
-      <div>
-        <h3 className="text-center pt-2">Wellcome To Cars Shop</h3>
-      </div>
-      <div className="container pt-4">
-        <div>
-           <Carshop/>
+    <Navbar/>
+      <div className="container pt-5">
+        <CarCards/>
         </div>
-        <div md={12}></div>
-      </div>
+      <Footerbar/>
     </>
   );
 };

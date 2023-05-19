@@ -10,11 +10,12 @@ function DropDL(props) {
 
   return (
     <div>
-      <FormControl sx={{minWidth: 195 }}>
-        <InputLabel id="demo-simple-select-helper-label">
+      <FormControl  sx={{minWidth: 310}}>
+        <InputLabel className="text-white" id="demo-simple-select-helper-label">
           Select Type
         </InputLabel>
         <Select
+        className="text-white"
         variant={"standard"}
           labelId="demo-simple-select-helper-label"
           id="demo-simple-select-helper"

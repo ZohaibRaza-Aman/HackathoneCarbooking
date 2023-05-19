@@ -10,6 +10,7 @@ import DropDL from "../../Components/dropDL";
 import { useNavigate } from "react-router-dom";
 import { signUpUser } from "../../config/firebase/firbasemethods";
 import { Box } from "@mui/material";
+import Navbar from "./navbar";
 
 export default function SignUp() {
   const [model, setModel] = useState({});
@@ -44,7 +45,10 @@ export default function SignUp() {
   };
 
   return (
-    <div>
+    <>
+    <Navbar/>
+    <div className="pt-3">
+      <div className="pt-5">
       <section className="main-sec">
         <div className="login-box">
           <form>
@@ -111,9 +115,7 @@ export default function SignUp() {
               />
               <label>Confirm Your Password</label>
             </div>
-            <Box className="p-2">
               <DropDL
-                className="text-white text-center"
                 value={model.userType}
                 label={"Select Type"}
                 handleOonChange={(e) => handleChange(e)}
@@ -128,7 +130,6 @@ export default function SignUp() {
                   },
                 ]}
               />
-            </Box>
             <div className="remember-forgot">
               <label></label>
               <a href="#"></a>
@@ -146,5 +147,7 @@ export default function SignUp() {
         </div>
       </section>
     </div>
+    </div>
+    </>
   );
 }

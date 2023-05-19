@@ -7,6 +7,7 @@ import { add } from "../reducer/loginslice";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../config/firebase/firbasemethods";
+import Navbar from "./navbar";
 
 export default function Login() {
   const [model, setModel] = useState({});
@@ -43,7 +44,9 @@ export default function Login() {
   };
 
   return (
-  <div>
+    <>
+    <Navbar/>
+  <div className="pt-5">
      <section className="main-sec">
      <div className="login-box">
       <form action="">
@@ -72,13 +75,14 @@ export default function Login() {
           <label><input type="checkbox"/>Remember me</label>
           <a href="#">Forgot Password?</a>
         </div>
-        <button disabled={loaoder} onClick={handleLoginUser} type="submit">Login</button>
         <div className="register-link">
           <p>Don't have an account?<a className="p-4" href="/signup">Rigister</a></p>
         </div>
+        <button disabled={loaoder} onClick={handleLoginUser} type="submit">Login</button>
       </form>
     </div>
    </section>
   </div>
+    </>
   );
 }
